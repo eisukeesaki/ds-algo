@@ -4,10 +4,7 @@ class Search:
     @staticmethod
     def binary(x: int, space: List[int], lo: int, hi: int) -> int:
         while lo <= hi:
-            """
-            lo+(hi-lo) = search range
-            """
-            md = lo + (hi - lo) // 2
+            md = lo + (hi - lo) // 2 # lo+(hi-lo) = search range
 
             if space[md] == x:
                 return md
