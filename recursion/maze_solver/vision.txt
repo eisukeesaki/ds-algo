@@ -1,0 +1,10 @@
+S = start of maze
+E = end of maze
+` ` = path
+# = wall
+
+maze = [
+    "###E#",
+    "     ",
+    "#S###"
+]
