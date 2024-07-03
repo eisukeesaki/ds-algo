@@ -1,18 +1,40 @@
-arr = [10, 20, 30, 40, 50, 60, 70, 80, 90]
-to_find = 100
+class Binary_Search:
+    @staticmethod
+    def target_is_in_list(l, tgt):
+        first = 0
+        last = len(l) - 1
+        while first <= last:
+            mid = int((last + first) / 2)
+            if l[mid] == tgt:
+                return True
+            elif l[mid] < tgt:
+                first = mid + 1
+            elif l[mid] > tgt:
+                last = mid - 1
+        return False
 
-def binary_search(scope, target):
-    first = 0
-    last = len(scope) - 1
-    while first <= last:
-        middle = int((last + first) / 2)
-        if scope[middle] == target:
-            return True
-        elif scope[middle] < target:
-            first = middle + 1
-        elif scope[middle] > target:
-            last = middle - 1
-    return False
+    @staticmethod
+    def get_index_of_target(l: list[int], tgt: int) -> int:
+        """
+        Returns:
+            - index of the search target
+            - -1 to indicate not found
+        """
+        first = 0
+        last = len(l) - 1
+        while first <= last:
+            mid = int((first + last) / 2)
+            if l[mid] == tgt:
+                return mid
+            elif l[mid] < tgt:
+                first = mid + 1
+            elif l[mid] > tgt:
+                last = mid - 1
+        return -1
 
-result = binary_search(arr, to_find)
-print(result)
+scope = [10, 20, 30, 40, 50]
+target = 40
+
+# print(Binary_Search.target_is_in_list(scope, target))
+
+print(Binary_Search.get_index_of_target(scope, target))
