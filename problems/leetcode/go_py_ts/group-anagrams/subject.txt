@@ -1,0 +1,56 @@
+what is the problem?
+--------------------
+
+Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+ 
+
+Example 1:
+
+Input: strs = ["eat","tea","tan","ate","nat","bat"]
+Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+
+Example 2:
+
+Input: strs = [""]
+Output: [[""]]
+
+Example 3:
+
+Input: strs = ["a"]
+Output: [["a"]]
+
+Constraints:
+
+    1 <= strs.length <= 104
+    0 <= strs[i].length <= 100
+    strs[i] consists of lowercase English letters.
+
+
+how can I solve by hand?
+------------------------
+
+["eat","tea","tan","ate","nat","bat"]
+[["bat"],["nat","tan"],["ate","eat","tea"]]
+
+attention: bat
+compare  : 
+res: [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+
+
+what to ask LM?
+---------------
+
+I'm designing the solution for this coding problem.
+
+Here is my imcomplete algorithm:
+* take input
+* iterate each strings in input, one by one
+* compare the string being iterated on against the next string in the input: compare each character to check if the string being compared against (str) contains all the characters contained in the string being iterated on (curr). if the constituents of the string match, copy curr and str into a newly created string within a list. if not, skip the string and move on to the next.
+
+what are the solutions?
+----------------------
+
+https://leetcode.com/problems/group-anagrams/solutions/3687735/beats-100-c-java-python-beginner-friendly/
