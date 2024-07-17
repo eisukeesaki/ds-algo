@@ -1,0 +1,40 @@
+CIRCULAR BUFFER
+
+A circular buffer is a buffer of fixed, finite size into which there are two indices:
+
+        A 'head' index - the point at which the producer inserts items into the buffer.
+
+        A 'tail' index - the point at which the consumer finds the next item in the buffer.
+
+Typically when the tail pointer is equal to the head pointer, the buffer is empty; and the buffer is full when the head pointer is one less than the tail pointer.
+
+The head index is incremented when items are added, and the tail index when items are removed. The tail index should never jump the head index, and both indices should be wrapped to 0 when they reach the end of the buffer, thus allowing an infinite amount of data to flow through the buffer.
+
+https://docs.kernel.org/core-api/circular-buffers.html
+    
+---
+capacity =     7
+buffer = 1234567
+head     h      
+tail           t
+size = 7
+---
+So, even if the head is at the end of the allocated array, the circular buffer's wrap-around behavior ensures that insertion and deletion continue to fun
+MODULUS OP
+
+DividendDividendDividen = left operand
+-----------------------
+DividerDivider          = right operand
+              ---------
+              Remainder = result
+
+ooo
+---
+xx
+  |
+  o - remainder
+
+ooo
+xxxx
+----
+ooo - dividend remains undivided
