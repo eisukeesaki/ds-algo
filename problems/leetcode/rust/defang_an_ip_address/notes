@@ -1,0 +1,42 @@
+Given a valid (IPv4) IP address, return a defanged version of that IP address.
+
+A defanged IP address replaces every period "." with "[.]".
+
+what is the etymology of the verb "fang"?
+
+Input: address = "255.100.50.0"
+Output: "255[.]100[.]50[.]0"
+
+use language features effectively
+know how to manually do the things that the features do for you
+
+what would a fully manual approach in C look like? explain in English not code.
+// how can we express the following algorithm as simply as possible in rust?
+// introduce me to the components of possible approaches for implementation
+// in English. Don't show me full programs.
+// sort the list of appraoches by amount of manual work required by programmers in descending order
+// takes an ipv4 address and returns the defanged version of it
+// preconditions:
+//    adr is ipv4 address
+fn defang_ip_addr(adr: String) -> String {
+   nth_dot = 0
+   windows(3)
+   while nth_dot < 0
+      slide window until we find '.' through the middle element of window
+      overwrite character before and after '.' with '[' and ']' respectively
+      increment nth_dot
+}
+
+fn defang_ip_addr(adr: String) -> String {
+   let defanged = adr.replace(".", "[.]");
+   defanged
+}
+
+fn main() {
+   let ipv4a = String::from("255.25.2.0");
+   let defanged = defang_ip_addr(ipv4a);
+   let expected = "255[.]25[.]2[.]0";
+   assert_eq!(expected, ipv4a);
+   println!("{ipv4a} {defanged}");
+}
+
