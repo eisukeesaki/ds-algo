@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/score-of-a-string
 //
-// Returns the score of s  sum of aboslute difference of 
+// Returns the score of s.
 // Score is the sum of the absolute difference between ASCII values of adjacent
 // characters.
 // preconditions:
