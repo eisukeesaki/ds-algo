@@ -6,7 +6,6 @@
 fn num_jewels_in_stones(jewels: String, stones: String) -> i32 {
    let mut tot_jewels = 0;
    for stone in stones.chars() {
-      // does contain stop when it finds the first occurence of stone in jewels?
       if jewels.contains(stone) {
          tot_jewels += 1;
       }
