@@ -1,7 +1,6 @@
 #include <string.h>
 #include <stdio.h>
 
-does source code of linux kernel use break statements?
 // return number of jewels in stones where:
 // jewels are represented as case-sentive characters in jewels and
 // stones are jewels if they appear in jewels
