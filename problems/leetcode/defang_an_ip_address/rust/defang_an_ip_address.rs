@@ -1,6 +1,7 @@
 // take an ip address and return a defanged version of it
 // preconditions:
 //    adr is ipv4 address
+// TODO: analzye and document time and space complexity for user
 fn defang_ip_addr(adr: String) -> String {
    let defanged = adr.replace(".", "[.]");
    defanged
